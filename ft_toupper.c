@@ -6,11 +6,9 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 19:15:39 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/12 19:55:37 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/09/20 17:38:29 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_toupper(int c)
 {
@@ -21,7 +19,8 @@ int	ft_toupper(int c)
 	}
 	return (c);
 }
-
+/*
+#include <stdio.h>
 int	main(void)
 {
 	int p;
@@ -32,4 +31,4 @@ int	main(void)
 	printf("%c \n", l);
 
 	return (0);
-}
+}*/

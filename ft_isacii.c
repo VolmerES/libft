@@ -6,11 +6,9 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 15:40:03 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/11 16:03:19 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/09/20 13:49:22 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_isascii(int c)
 {
@@ -19,10 +17,11 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
-
+/*
+#include <stdio.h>
 int	main	(void)
 {
-	long c = '';
+	long c = '~';
 
 	ft_isascii(c);
 	if (ft_isascii(c) == 1)
@@ -30,4 +29,4 @@ int	main	(void)
 	else
 		printf("No es ascii /n");
 	return (0);	
-}
+}*/

@@ -6,19 +6,19 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 15:19:41 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/12 20:05:04 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/09/20 13:45:49 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
 int	ft_isalnum(int c)
 {
-	if ((c >= '1' && c <= '9') || (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	if ((c >= '1' && c <= '9') || (c >= 'a' && c <= 'z')
+		|| (c >= 'A' && c <= 'Z'))
 		return (1);
 	return (0);
 }
 
+/*#include <stdio.h>
 int	main	(void)
 {
 	int c = '?';
@@ -28,6 +28,4 @@ int	main	(void)
 	else
 		printf("No es alphanum/n");
 	return (0);
-
-
-}
+}*/

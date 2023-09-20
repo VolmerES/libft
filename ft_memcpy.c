@@ -6,22 +6,21 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 14:33:21 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/12 16:43:00 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/09/20 17:31:45 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <ctype.h>
 
-void *ft_memcpy(void *destination, const void *source, size_t num)
+void	*ft_memcpy(void *destination, const void *source, size_t num)
 {
-	const unsigned char *s;
-	unsigned char *d;
-	int i;
+	const unsigned char	*s;
+	unsigned char		*d;
+	int					i;
 
 	d = (unsigned char *) destination;
 	s = (const unsigned char *) source;
 	i = 0;
-
 	while (i < num)
 	{
 		d[i] = s[i];
@@ -30,7 +29,7 @@ void *ft_memcpy(void *destination, const void *source, size_t num)
 	return (destination);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char src[] = "Hola mundo";
 	char dest[20];
@@ -45,4 +44,4 @@ int	main(void)
 	}
 
 	return (0);
-}
+}*/

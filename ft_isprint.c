@@ -6,11 +6,9 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 16:06:44 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/11 16:45:38 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/09/20 13:52:24 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_isprint(int c)
 {
@@ -19,7 +17,8 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
-
+/*
+#include <stdio.h>
 int	main	(void)
 {
 	int c = "h";
@@ -30,4 +29,4 @@ int	main	(void)
 	else
 		printf("No es imprimible/n");
 	return (0);
-}
+}*/
