@@ -1,44 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 14:22:16 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/21 14:51:52 by jdelorme         ###   ########.fr       */
+/*   Created: 2023/09/21 20:28:55 by jdelorme          #+#    #+#             */
+/*   Updated: 2023/09/21 21:05:33 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <ctype.h>
 
-size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
+void	*ft_memchr(const void *str, int val, size_t num)
 {
-	size_t	i;
-	size_t	j;
-
+	char *s;
+	int	i;
+	
+	s = (char *)str;
 	i = 0;
-	j = 0;
-	while (i <= dstsize)
+	while (num > 0)
 	{
-		while (dest[i] != '\0')
-		{
-			i++;
-		}
-		dest[i] = src [j];
+		if (s[i] == (char)val)
+			return ((void *) s + i);
 		i++;
-		j++;
+		num--;
 	}
 	return (0);
 }
 /*
+#include <string.h>
+#include <stdio.h>
+
 int	main()
 {
-	char	des[] = "Hola";
-	char	fue[] = "42";
-	int	f;
+	char cad[] = "Hola 42";
+	char *f;
+	int	i = 'a';
 
-	f = ft_strlcat(des, fue, 7);
-	printf("%s \n", des);
-	return (0);
+	f = ft_memchr(cad, i, 5);
+	printf("El caracter se encuentra en la posicion %p \n", (char *) f);
+	f = memchr(cad, i, 5);
+	printf("El caracter se encuentra en la posicion %p \n", f);
+	return(0);
 }*/

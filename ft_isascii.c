@@ -1,44 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 14:22:16 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/21 14:51:52 by jdelorme         ###   ########.fr       */
+/*   Created: 2023/09/11 15:40:03 by jdelorme          #+#    #+#             */
+/*   Updated: 2023/09/21 14:32:11 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-
-size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
+int	ft_isascii(int c)
 {
-	size_t	i;
-	size_t	j;
-
-	i = 0;
-	j = 0;
-	while (i <= dstsize)
-	{
-		while (dest[i] != '\0')
-		{
-			i++;
-		}
-		dest[i] = src [j];
-		i++;
-		j++;
-	}
-	return (0);
+	if (c >= 0 && c <= 127)
+		return (1);
+	else
+		return (0);
 }
 /*
-int	main()
+#include <stdio.h>
+int	main	(void)
 {
-	char	des[] = "Hola";
-	char	fue[] = "42";
-	int	f;
+	long c = '~';
 
-	f = ft_strlcat(des, fue, 7);
-	printf("%s \n", des);
-	return (0);
+	ft_isascii(c);
+	if (ft_isascii(c) == 1)
+		printf("Si que es ascii /n");
+	else
+		printf("No es ascii /n");
+	return (0);	
 }*/

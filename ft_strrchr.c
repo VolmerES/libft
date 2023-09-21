@@ -1,44 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 14:22:16 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/21 14:51:52 by jdelorme         ###   ########.fr       */
+/*   Created: 2023/09/21 19:01:44 by jdelorme          #+#    #+#             */
+/*   Updated: 2023/09/21 20:25:25 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
+#include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
+char	*ft_strrchr(const char *str, int c)
 {
-	size_t	i;
-	size_t	j;
+	int	i;
+	char *s;
 
-	i = 0;
-	j = 0;
-	while (i <= dstsize)
+	s = (char *)str;
+	i = ft_strlen(s);
+	while (i >= 0)
 	{
-		while (dest[i] != '\0')
-		{
-			i++;
-		}
-		dest[i] = src [j];
-		i++;
-		j++;
+		if (s[i] == (char) c)
+			return (&s[i]);
+		i--;
 	}
+	if (s[i] == '\0')
+		return (&s[i]);
 	return (0);
 }
 /*
+#include <stdio.h>
+#include <string.h>
 int	main()
 {
-	char	des[] = "Hola";
-	char	fue[] = "42";
-	int	f;
+	char str[] = "Hola 42";
+	char *f;
+	int a = 'a';
 
-	f = ft_strlcat(des, fue, 7);
-	printf("%s \n", des);
+	f = ft_strrchr(str, a);
+	printf("La posicion rev es %p \n", (void *) f);
+	f = strrchr(str, a);
+	printf("La posicion rev es %p \n", (void *) f);
+
 	return (0);
 }*/

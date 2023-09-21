@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 15:11:56 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/20 18:03:55 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/09/21 14:53:14 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
 	const unsigned char	*buff1;
 	const unsigned char	*buff2;
-	int					i;
+	size_t					i;
 
 	buff1 = (const unsigned char *) str1;
 	buff2 = (const unsigned char *) str2;

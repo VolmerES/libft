@@ -1,44 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 14:22:16 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/21 14:51:52 by jdelorme         ###   ########.fr       */
+/*   Created: 2023/09/21 14:58:03 by jdelorme          #+#    #+#             */
+/*   Updated: 2023/09/21 18:56:46 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ctype.h>
 
-size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
+char	*ft_strchr(const char *str, int c)
 {
-	size_t	i;
-	size_t	j;
+	int		i;
+	char	*s;
 
+	s = (char *)str;
 	i = 0;
-	j = 0;
-	while (i <= dstsize)
+	while (s[i] != '\0')
 	{
-		while (dest[i] != '\0')
+		if (s[i] == c)
 		{
-			i++;
+			return (&s[i]);
 		}
-		dest[i] = src [j];
 		i++;
-		j++;
 	}
+	if ((char )c  == '\0')
+		return (&s[i]);
 	return (0);
 }
 /*
+#include <stdio.h>
+#include <string.h>
 int	main()
 {
-	char	des[] = "Hola";
-	char	fue[] = "42";
-	int	f;
-
-	f = ft_strlcat(des, fue, 7);
-	printf("%s \n", des);
+	char cad[] = "Hola 42";
+	char *f;
+	int a;
+	
+	a = 'a';
+	f = ft_strchr(cad, a);
+	printf("La letra esta en la posicion %p %p %zu \n", cad, (void *)f, f - cad);
+	f = strchr(cad, a);
+	printf("La letra esta en la posicion %p %p %zu \n",  cad, f, f - cad);
 	return (0);
+
 }*/

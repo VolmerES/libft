@@ -6,17 +6,17 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 14:33:21 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/20 17:31:45 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/09/21 14:48:33 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
+#include <stdio.h>
 
 void	*ft_memcpy(void *destination, const void *source, size_t num)
 {
 	const unsigned char	*s;
 	unsigned char		*d;
-	int					i;
+	size_t					i;
 
 	d = (unsigned char *) destination;
 	s = (const unsigned char *) source;

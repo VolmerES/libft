@@ -6,9 +6,11 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 16:46:52 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/20 14:01:09 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/09/21 20:16:23 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strlen(char *str)
 {
