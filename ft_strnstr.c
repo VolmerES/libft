@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 21:25:02 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/21 21:52:45 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/09/22 16:39:10 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 char	*ft_strnstr(const char *str, const char *substr, size_t len)
 {
-	if (substr == '\0')
+	const char *cad;
+	const char *subcad;
+
+	if (substr != '\0')
 	{
 		while (*str != '\0' && len > 0)
 		{	
-			const char *cad;
-			const char *subcad;
 			cad = str;
 			subcad = substr;
 			while (*cad == *subcad && cad != '\0' && len > 0)
@@ -34,5 +35,22 @@ char	*ft_strnstr(const char *str, const char *substr, size_t len)
 		len--;
 		}
 	}
-	return (NULL);
+	return (0);
 }
+/*
+#include <stdio.h>
+#include <string.h>
+
+int	main()
+{
+	char cad[] = "Hola mundo 42";
+	char scad[] = "mundo";
+	char *f;
+
+	f = ft_strnstr(cad, scad, 20);
+	printf("La subcadena se encuentra de %s \n", f);
+	f = strnstr(cad, scad, 20);
+	printf("La subcadena se encuentra de %s \n", f);
+	return (0);
+
+}*/
