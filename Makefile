@@ -14,7 +14,12 @@ SRC = ft_isalpha.c \
 		ft_tolower.c \
 		ft_strchr.c \
 		ft_memcmp.c \
-		ft_strnstr.c
+		ft_strnstr.c \
+		ft_calloc.c \
+		ft_atoi.c \
+		ft_strdup.c \
+		ft_putchar_fd.c \
+		ft_putstr_fd.c
 
 OBJS = $(SRC:.c=.o)
 CFLAGS = -Wall -Wextra -Werror
