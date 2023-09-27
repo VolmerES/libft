@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 19:02:21 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/26 19:43:27 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/09/27 11:11:06 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,14 @@
 
 void	*ft_calloc(size_t numelem, size_t sizeelem)
 {
-	int *ptr;
+	int	*ptr;
 
 	ptr = malloc(numelem * sizeelem);
-		if (ptr == NULL)
-			return (NULL);
+	if (ptr == NULL)
+		return (NULL);
 	ft_memset(ptr, 0, numelem * sizeelem);
-		return (ptr);
+	return (ptr);
 }
-
 
 /*int	main()
 {

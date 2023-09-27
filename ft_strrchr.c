@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 19:01:44 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/21 20:25:25 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/09/27 15:43:15 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	int	i;
-	char *s;
+	int		i;
+	char	*s;
 
 	s = (char *)str;
 	i = ft_strlen(s);

@@ -6,15 +6,15 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 20:27:04 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/13 12:08:17 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/09/27 16:48:47 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int	ft_strncmp (const char *str1, const char *str2, size_t n)
+int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	int i;
+	size_t	i;
 
 	i = 0;
 	while ((str1[i] || str2[i]) && (i < n))
@@ -27,7 +27,7 @@ int	ft_strncmp (const char *str1, const char *str2, size_t n)
 	}
 	return (0);
 }
-
+/*
 int	main()
 {
 	char cad1[] = "hola 42";
@@ -37,4 +37,4 @@ int	main()
 	val = ft_strncmp(cad1, cad2, 3);
 	printf("El valor de retorno es %d \n", val);
 	return (0);
-}
+}*/

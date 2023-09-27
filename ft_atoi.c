@@ -6,18 +6,18 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 19:35:00 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/26 20:19:07 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/09/27 11:07:06 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(const char *str)
 {
-	int r;
-	int n;
+	int	r;
+	int	n;
 
 	r = 0;
 	n = 1;
-	while (*str == 32 || (*str >= 9 && *str <=13))
+	while (*str == 32 || (*str >= 9 && *str <= 13))
 		str++;
 	if (*str == '-')
 		n *= -1;

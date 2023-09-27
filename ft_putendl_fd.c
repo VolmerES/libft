@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 21:36:17 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/27 10:53:00 by jdelorme         ###   ########.fr       */
+/*   Created: 2023/09/27 10:50:53 by jdelorme          #+#    #+#             */
+/*   Updated: 2023/09/27 11:01:27 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-	write(fd, s, ft_strlen(s));
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
 /*
 int	main()
 {
-	char *str = "Hola";
-	int f = 1;
+	char *cad = "Hola 42";
+	int fd = 1;
 
-	ft_putstr_fd(str, f);
+	ft_putendl_fd(cad, fd);
 	return(0);
 }*/

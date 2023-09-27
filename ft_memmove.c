@@ -6,28 +6,29 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 18:28:16 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/12 18:59:26 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/09/27 18:38:13 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t num)
 {
-	unsigned char *d;
-	unsigned char *s;
+	unsigned char	*d;
+	unsigned char	*s;
 
+	if (src == NULL && dest == NULL)
+		return (NULL);
 	d = (unsigned char *) dest;
-	s = (const unsigned char *) src;
-
+	s = (unsigned char *) src;
 	if (s < d && s + num > d)
 	{
 		d += num;
 		s += num;
-			while (num--)
-			{
-				*d++ = *s++;
-			}
+		while (num--)
+		{
+			*--d = *--s;
+		}
 	}
 	else
 	{
@@ -38,15 +39,17 @@ void	*ft_memmove(void *dest, const void *src, size_t num)
 	}
 	return (dest);
 }
-
+/*
 int	main(void)
 {
 	char destino[20];
 	char fuente[] = "Hola Mundo";
-	size_t longitud;
+	size_t longitud = ft_strlen(fuente) + 1;
+	char *f;
 
-	ft_memmove(destino, fuente, longitud);
+
+	f = ft_memmove(destino, fuente, longitud);
 	printf("%s \n", destino);
 
 	return (0);
-}
+}*/

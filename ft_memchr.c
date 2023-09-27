@@ -6,18 +6,17 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 20:28:55 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/21 21:05:33 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/09/27 15:55:11 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <ctype.h>
 
 void	*ft_memchr(const void *str, int val, size_t num)
 {
-	char *s;
-	int	i;
-	
+	char	*s;
+	int		i;
+
 	s = (char *)str;
 	i = 0;
 	while (num > 0)

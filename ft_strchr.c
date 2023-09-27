@@ -6,11 +6,11 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 14:58:03 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/21 18:56:46 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/09/27 16:45:41 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *str, int c)
 {
@@ -27,7 +27,7 @@ char	*ft_strchr(const char *str, int c)
 		}
 		i++;
 	}
-	if ((char )c  == '\0')
+	if ((char )c == '\0')
 		return (&s[i]);
 	return (0);
 }
