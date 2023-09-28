@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 18:15:37 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/27 15:58:31 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/09/28 14:42:47 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
 char	*ft_strdup(const char *str);
+char	*ft_itoa(int c);
 char	*ft_strnstr(const char *str, const char *substr, size_t len);
 #endif
