@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 12:21:15 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/27 20:26:11 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/09/29 15:32:46 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 		}
 		dest[i] = '\0';
 	}
-	return (ft_strlen((char *)src));
+	return (ft_strlen(src));
 }
 /*
 int	main()

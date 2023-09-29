@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 12:42:45 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/28 18:51:08 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/09/28 19:09:25 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ int	ft_counter(int dig)
 
 char	*ft_itoa(int n)
 {
-	int can;
-	char *str;
-	long aux; 
+	int		can;
+	char	*str;
+	long	aux; 
 
 	aux = n;
 	can = ft_counter(n);
@@ -58,7 +58,7 @@ int	main()
 {
 	char  *f;
 	
-	f = ft_itoa(-2147483648);
+	f = ft_itoa(0);
 	printf ("Itoa devuelve %s \n", f);
 	return(0);
 }

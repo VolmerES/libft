@@ -1,47 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 14:22:16 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/29 20:46:33 by jdelorme         ###   ########.fr       */
+/*   Created: 2023/09/29 18:53:48 by jdelorme          #+#    #+#             */
+/*   Updated: 2023/09/29 20:48:56 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
+char	*ft_strjoin(const char *s1, char const *s2)
 {
-	size_t	i;
-	size_t	j;
-	int total;
+	int i;
+	int j;
+	char *str;
+
+	if (s1 == NULL && s2 == NULL)
+		return (NULL);
 
 	i = 0;
 	j = 0;
-	total = (ft_strlen(dest) + ft_strlen(src));
-	while (i < dstsize && dest[i] != '\0')
-		i++;
-	while ((i + j + 1) < dstsize && src[j] != '\0')
+	str = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	while (s1 != NULL && s1[i] != '\0')
 	{
-		dest[i + j] = src[j];
+		str[i] = s1[i];
+		i++;
+	}
+	while (s2 != NULL && s2[j] != '\0')
+	{
+		str[i + j] = s2[j];
 		j++;
 	}
-	if (i != dstsize)
-		dest[i + j] = '\0';
-	return (i + ft_strlen(src));
+	str[i + j] = '\0';
+
+	return (str);
 }
 /*
+#include <stdio.h>
+
 int	main()
 {
-	char	des[] = "Hola";
-	char	fue[] = "42";
-	int	f;
+	char *cad1 = "Hola";
+	char *cad2 = "42";
+	char *f;
 
-	f = ft_strlcat(des, fue, 7);
-	printf("%s \n", des);
-	strlcat(des, fue, 7);
-	printf("%s \n", des2);
+	f = ft_strjoin(cad1, cad2);
+	printf("Devuelve: %s \n", f);
 	return (0);
 }*/

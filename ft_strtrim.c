@@ -1,38 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 21:06:38 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/29 17:49:18 by jdelorme         ###   ########.fr       */
+/*   Created: 2023/09/29 20:52:16 by jdelorme          #+#    #+#             */
+/*   Updated: 2023/09/29 21:13:48 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+//declarar dos interadores
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	write(fd, &c, 1);
+	char *ministr;
+	char *rec;
+	int i;
+	int j;
+
+	while (s1 != '\0')
+	{	
+		while (s1 == set)
+		{
+			j++;
+		}
+	i++;
+	}
+		
 }
 
-/*	
-#include <fcntl.h>
 int	main()
 {
- 	int fd = open("hola.txt", O_RDWR | O_CREAT);
-	int a = 'a';
-	printf("%d \n", fd);
-	ft_putchar_fd(a, fd);
+	char *cad = "Hola 42";
+	char *can = "la";
 
-
-	for (int i = 0; i < 10; i++)
-	{
-		if (i % 2)
-			dprintf(1, "normal\n");
-		else
-			dprintf(2, "error\n");
-	}
-	return(0);
-}*/
+	f = ft_strtrim(cad, can);
+	printf("Devuelve: %s \n", f);
+	return (0);
+}
