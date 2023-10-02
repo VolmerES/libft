@@ -1,41 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 20:19:23 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/02 17:01:15 by jdelorme         ###   ########.fr       */
+/*   Created: 2023/10/02 16:57:57 by jdelorme          #+#    #+#             */
+/*   Updated: 2023/10/02 17:34:47 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *str)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*cpy;
-	int		i;
+	char *str;
+	int i;
 
-	i = 0;
-	cpy = malloc((ft_strlen((char *)str) + 1) * sizeof(char));
-	if (cpy == NULL)
+	if (!s || !f)
 		return (NULL);
-	while (str[i] != '\0')
-	{	
-		cpy[i] = str[i];
+	i = 0;
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!str)
+		return (NULL);
+	while(s[i] != '\0')
+	{
+		str[i] = (*f)(i, s[i]);
 		i++;
 	}
-	cpy[i] = '\0';
-	return (cpy);
+	str[i] = '\0';
+
+	return (str);
 }
-/*
+
 int	main()
 {
-	char *ptr = NULL;
-	char *f;
-
-	f = ft_strdup(ptr);
-	printf("La copia devuelve %s \n", f);
-	return(0);
-}*/
+	
+}

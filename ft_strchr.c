@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 14:58:03 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/27 16:45:41 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/02 14:48:48 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ char	*ft_strchr(const char *str, int c)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 		{
 			return (&s[i]);
 		}
 		i++;
 	}
-	if ((char )c == '\0')
+	if ((char)c == '\0')
 		return (&s[i]);
 	return (0);
 }
