@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 18:15:37 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/02 17:33:39 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/02 19:32:33 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	ft_bzero(void *s, size_t len);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 void	*ft_memset(void *ptr, int val, size_t len);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	*ft_memmove(void *dest, const void *src, size_t num);
@@ -48,4 +49,11 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strnstr(const char *str, const char *substr, size_t len);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+typedef struct	s_list
+{
+	void			*content;
+	struct s_list	*next
+}					t_list;
+
 #endif
