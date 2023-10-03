@@ -6,13 +6,13 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 12:42:45 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/28 19:09:25 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/03 14:55:02 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_counter(int dig)
+static int	ft_counter(int dig)
 {
 	int	i;
 
@@ -53,7 +53,7 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-
+/*
 int	main()
 {
 	char  *f;
@@ -61,4 +61,4 @@ int	main()
 	f = ft_itoa(0);
 	printf ("Itoa devuelve %s \n", f);
 	return(0);
-}
+}*/

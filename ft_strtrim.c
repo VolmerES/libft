@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 20:52:16 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/02 17:30:33 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/03 18:59:49 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 //calcular la longitud de la string llamando a mi funcion

@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/02 16:57:57 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/03 14:55:51 by jdelorme         ###   ########.fr       */
+/*   Created: 2023/10/03 14:17:25 by jdelorme          #+#    #+#             */
+/*   Updated: 2023/10/03 14:58:50 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+t_list	*ft_lstnew(void *content)
 {
-	char *str;
-	int i;
-
-	if (!s || !f)
+	t_list	*list;
+	
+	list = malloc(sizeof(t_list));
+	if (!list)
 		return (NULL);
-	i = 0;
-	str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
-	if (!str)
-		return (NULL);
-	while(s[i] != '\0')
-	{
-		str[i] = (*f)(i, s[i]);
-		i++;
-	}
-	str[i] = '\0';
-
-	return (str);
+	list -> content = content;
+	list -> next = NULL;
+	return (list);
 }
+/*
+int	main()
+{
+	char *c;
+	t_list *f;
+
+	c = "Hola";
+	f = ft_lstnew(c);
+	printf("Devuelve; %s \n", f -> content);
+
+	return(0);
+}*/
