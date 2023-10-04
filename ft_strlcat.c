@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 14:22:16 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/29 20:46:33 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/04 19:29:39 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 {
 	size_t	i;
 	size_t	j;
-	int total;
+	int		total;
 
 	i = 0;
 	j = 0;

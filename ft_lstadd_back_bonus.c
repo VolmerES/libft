@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 18:45:40 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/03 19:45:47 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/04 19:58:33 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
+	t_list	*actual;
+
 	if (!*lst)
 		*lst = new;
 	else
 	{
-		t_list	*actual = *lst;
+		actual = *lst;
 		while (actual->next)
 			actual = actual->next;
 		actual->next = new;

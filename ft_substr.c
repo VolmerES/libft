@@ -6,27 +6,19 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 16:23:16 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/29 18:34:33 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/04 19:35:02 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-//declarar una variable para almacenar la string							OK
-//comprabar que no sea null													OK
-//si la longitud de la string es menor que start, len = 0
-//si la la strlen(start+string) < len, copiar en len = lstring(s + start)
-//llamar a malloc, asignandoselo a mi substr
-//si substr = NULL
-//ft_strlcpy (substtr, s +star, len + 1)
-//retornar substr
 
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *substr;
+	char	*substr;
 
-	if (!s)
-		return (NULL);
-	if (ft_strlen(s) < start && ft_strlen(s) == 0)
+	if (!s || start >= ft_strlen(s))
+		return (ft_strdup(""));
+	if (ft_strlen(s) <= start)
 		len = 0;
 	if (ft_strlen(start + s) < len)
 		len = ft_strlen(s + start);

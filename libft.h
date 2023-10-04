@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 18:15:37 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/04 13:55:09 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/04 19:56:26 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct	s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
@@ -29,7 +29,7 @@ int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_atoi(const char *str);
 int		ft_isprint(int c);
-size_t		ft_strlen(const char *str);
+size_t	ft_strlen(const char *str);
 int		ft_memcmp(const void *str1, const void *str2, size_t n);
 int		ft_strncmp(const char *str1, const char *str2, size_t n);
 void	ft_bzero(void *s, size_t len);
@@ -46,6 +46,7 @@ void	*ft_calloc(size_t numelem, size_t sizeelem);
 size_t	ft_strlcat(char *dest, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize);
 char	*ft_strchr(const char *str, int c);
+char	*ft_strnstr(const char *str, const char *substr, size_t len);
 char	*ft_strrchr(const char *str, int c);
 char	*ft_strjoin(const char *s1, char const *s2);
 char	*ft_strdup(const char *str);

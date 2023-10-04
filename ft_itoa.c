@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 12:42:45 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/03 14:55:02 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/04 19:23:18 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_itoa(int n)
 {
 	int		can;
 	char	*str;
-	long	aux; 
+	long	aux;
 
 	aux = n;
 	can = ft_counter(n);

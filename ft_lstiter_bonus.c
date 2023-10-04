@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 13:09:11 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/04 13:18:18 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/04 20:09:16 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,16 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list *actnod;
-	t_list *nxtnod;
+	t_list	*actnod;
+	t_list	*nxtnod;
 
-	if(!lst)
-		return;
-
+	if (!lst)
+		return ;
 	actnod = lst;
 	while (actnod)
 	{
 		nxtnod = actnod->next;
-		if(f)
+		if (f)
 			f(actnod->content);
 		actnod = nxtnod;
 	}

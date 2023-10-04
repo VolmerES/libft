@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 20:52:52 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/04 13:13:40 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/04 20:08:58 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*actnod;
 	t_list	*nxtnod;
 
-	if(!lst || !*lst)
-		return;
-
+	if (!lst || !*lst)
+		return ;
 	actnod = *lst;
 	while (actnod)
 	{

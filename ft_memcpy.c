@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 14:33:21 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/29 16:57:25 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/04 18:23:04 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_memcpy(void *destination, const void *source, size_t num)
 	unsigned char		*d;
 	size_t				i;
 
-	//if (destination == NULL && source == NULL)
-	//	return (NULL);
+	if (destination == NULL && source == NULL)
+		return (NULL);
 	d = (unsigned char *) destination;
 	s = (const unsigned char *) source;
 	i = 0;

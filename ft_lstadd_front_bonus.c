@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 15:54:37 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/04 13:07:49 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/04 20:08:21 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!lst)
-		return;
+		return ;
 	new -> next = *lst;
 	*lst = new;
 }
