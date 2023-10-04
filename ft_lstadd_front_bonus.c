@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 15:54:37 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/03 19:24:09 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/04 13:07:49 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	new -> next = *lst;
 	*lst = new;
 }
-
+/*
 int	main()
 {
 	//char str[8] = "hola";
@@ -31,7 +31,7 @@ int	main()
 	for (int i = 0; i < 20; i++)
 	{
 		ft_lstadd_front(&my_list, ft_lstnew(n));
-	}/*
+	}
 	t_list *node1 = ft_lstnew((&hola);
 	t_list *node2 = ft_lstnew((int*) 7);
 	t_list *node3 = ft_lstnew((int*) 8);
@@ -52,11 +52,11 @@ int	main()
 	node5->next = NULL;
 
 	ft_lstadd_front(&node1, node5);
-*/	//for (int i = 0; i++)
+	//for (int i = 0; i++)
 	for (int i = 0; i < 20; i++)
 	{
 		printf("%d->", *((int *)my_list->content));
 		my_list = my_list->next;
 	}
 	return 0;
-}
+}*/
