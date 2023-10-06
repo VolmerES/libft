@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 21:25:02 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/04 20:20:37 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/06 21:16:44 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,22 @@
 
 char	*ft_strnstr(const char *str, const char *substr, size_t len)
 {
-	const char	*cad;
-	const char	*subcad;
-	size_t		r_len;
+	size_t	i;
+	size_t	result;
 
-	if (*substr == '\0')
-		return ((char *) str);
-	while (*str != '\0' && len > 0)
-	{	
-		if (*str == *substr)
-		{
-			cad = str;
-			subcad = substr;
-			r_len = len;
-			while (*cad == *subcad && *cad != '\0' && r_len > 0)
-			{
-				cad++;
-				subcad++;
-				r_len--;
-			}
-			if (*subcad == '\0')
-				return ((char *)str);
-		}
-		str++;
-		len--;
-	}
-	return (NULL);
+	i = 0;
+	if (str == NULL && len == 0)
+		return (NULL);
+	if (substr[0] == '\0')
+		return ((char *)str);
+	while ((str[i] != '\0') && (i + ft_strlen(substr) <= len))
+	{
+		result = ft_strncmp(&str[i], substr, ft_strlen(substr));
+		if (result == 0)
+			return ((char *)&str[i]);
+		i++;
+	}	
+	return (0);
 }
 
 /*

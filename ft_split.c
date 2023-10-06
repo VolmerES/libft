@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 15:06:22 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/05 20:12:57 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/06 19:09:17 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_count_words(char const *s, char c)
 	count = 0;
 	while (s[i] != '\0')
 	{
-		if ( s[i] != c)
+		if (s[i] != c)
 		{
 			count++;
 			while (s[i] != c && s[i] != '\0')
@@ -35,7 +35,7 @@ size_t	ft_count_words(char const *s, char c)
 
 size_t	ft_words_len(char const *s, char c)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0' && s[i] != c)
@@ -44,6 +44,17 @@ size_t	ft_words_len(char const *s, char c)
 	}
 	return (i);
 }
+
+void	ft_free(size_t i, char **str)
+{
+	while (i > 0)
+	{
+		i--;
+		free (str[i]);
+	}
+	free (str);
+}
+
 char	**ft_do_split(char const *s, char c, char **str, size_t words)
 {
 	size_t	i;
@@ -55,36 +66,41 @@ char	**ft_do_split(char const *s, char c, char **str, size_t words)
 	{
 		while (s[j] != '\0' && s[j] == c)
 			j++;
-
-		*(str + i) = ft_substr(s, j, (ft_words_len (&s[j], c)));
+		str[i] = ft_substr(s, j, (ft_words_len (&s[j], c)));
+		if (!str[i])
+			ft_free(i, str);
 		while (s[j] != '\0' && s[j] != c)
 			j++;
 		i++;
 	}
+	str[i] = NULL;
 	return (str);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**str;
 	size_t	words;
 
+	if (!s)
+		return (NULL);
 	words = ft_count_words(s, c);
 	str = (char **)malloc(sizeof(char *) * (words + 1));
+	if (!str)
+		return (NULL);
 	str = ft_do_split(s, c, str, words);
 	return (str);
-	
 }
 /*
 int	main()
 {
-	char **f = ft_split("Hola 42 Madrid", ' ');
+	char **f = ft_split(" hola mundo 42 !", ' ');
 	if (f)
 	{
 		for (int i = 0; f[i] != NULL; i++)
 		{
-    		printf("%s \n", f[i]);
+    		printf("%s\n", f[i]);
 		}
 	}
     return (0);
-} */
+}*/
