@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 14:22:16 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/04 19:29:39 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/07 19:30:19 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,3 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 		dest[i + j] = '\0';
 	return (i + ft_strlen(src));
 }
-/*
-int	main()
-{
-	char	des[] = "Hola";
-	char	fue[] = "42";
-	int	f;
-
-	f = ft_strlcat(des, fue, 7);
-	printf("%s \n", des);
-	strlcat(des, fue, 7);
-	printf("%s \n", des2);
-	return (0);
-}*/

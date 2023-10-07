@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 14:58:03 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/02 14:48:48 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/07 20:25:55 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,3 @@ char	*ft_strchr(const char *str, int c)
 		return (&s[i]);
 	return (0);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-int	main()
-{
-	char cad[] = "Hola 42";
-	char *f;
-	int a;
-	
-	a = 'a';
-	f = ft_strchr(cad, a);
-	printf("La letra esta en la posicion %p %p %zu \n", cad, (void *)f, f - cad);
-	f = strchr(cad, a);
-	printf("La letra esta en la posicion %p %p %zu \n",  cad, f, f - cad);
-	return (0);
-
-}*/

@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 15:14:33 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/07 19:13:03 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/07 20:44:25 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,6 +121,40 @@ int	main(int argc, char **argv)
 		ft_strlcpy(des, src, num);
 		printf(GREEN_TEXT "%s", des);
 	}
+	if (strcmp(argumento, "ft_strlcat.c") == 0)
+	{
+		int i = 0;
+		char *src = "42";
+		char *des = &argumento2[i];
+		ft_strlcat(des, src, num);
+		printf(GREEN_TEXT "%s", des);
+	}
+	if (strcmp(argumento, "ft_toupper.c") == 0)
+	{
+		int c = argumento2[0];
+		int f = ft_toupper(c);
+		printf(GREEN_TEXT "%c \n", f);
+	}
+	if (strcmp(argumento, "ft_tolower.c") == 0)
+	{
+		int c = argumento2[0];
+		int f = ft_tolower(c);
+		printf(GREEN_TEXT "%c \n", f);
+	}
+	if (strcmp(argumento, "ft_strchr.c") == 0)
+	{
+		char *cad = &argumento2[0];
+		char *f = ft_strchr(cad, 'a');
+		printf(GREEN_TEXT "%s \n", f);
+	}
+	if (strcmp(argumento, "ft_strrchr.c") == 0)
+	{
+		char *cad = &argumento2[0];
+		char *f = ft_strrchr(cad, 'a');
+		printf(GREEN_TEXT "%s \n", f);
+	}
+
+	
 
 	return (0);
 }
