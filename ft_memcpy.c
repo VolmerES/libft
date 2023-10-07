@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 14:33:21 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/04 18:23:04 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/07 18:43:19 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,20 +30,3 @@ void	*ft_memcpy(void *destination, const void *source, size_t num)
 	}
 	return (destination);
 }
-
-/*int	main(void)
-{
-	char src[] = "Hola mundo";
-	char dest[20];
-
-	ft_memcpy(dest, src, 11);
-
-	size_t i = 0;
-	while (dest[i] != '\0')
-	{
-		printf("%c", dest[i]);
-		i++;
-	}
-
-	return (0);
-}*/

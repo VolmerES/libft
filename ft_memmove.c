@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 18:28:16 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/29 21:11:13 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/07 18:58:43 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,17 +39,3 @@ void	*ft_memmove(void *dest, const void *src, size_t num)
 	}
 	return (dest);
 }
-/*
-int	main(void)
-{
-	char destino[20];
-	char fuente[] = "Hola Mundo";
-	size_t longitud = ft_strlen(fuente) + 1;
-	char *f;
-
-
-	f = ft_memmove(destino, fuente, longitud);
-	printf("%s \n", destino);
-
-	return (0);
-}*/

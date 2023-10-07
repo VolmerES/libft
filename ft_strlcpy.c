@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 12:21:15 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/05 16:14:15 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/07 19:10:31 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 	}
 	return (ft_strlen(src));
 }
-/*
-int	main()
-{
-	char	des[] = "ola";
-	char	src[] = "Hola 42";
-	int	f;
-
-	f = ft_strlcpy(des, src, 8);
-	printf("%s \n", des);
-	return (0);
-}*/
