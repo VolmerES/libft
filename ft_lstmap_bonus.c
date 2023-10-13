@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 13:18:41 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/04 20:03:40 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/13 19:34:21 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		if (!next_list)
 		{
 			ft_lstclear(&new_list, del);
+			del(value);
 			return (NULL);
 		}
 		ft_lstadd_back(&new_list, next_list);

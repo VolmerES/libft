@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 15:06:22 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/06 19:09:17 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/13 16:53:20 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,15 @@ size_t	ft_words_len(char const *s, char c)
 	return (i);
 }
 
-void	ft_free(size_t i, char **str)
+void	ft_free(char **str)
 {
-	while (i > 0)
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
 	{
-		i--;
 		free (str[i]);
+		i++;
 	}
 	free (str);
 }
@@ -68,7 +71,7 @@ char	**ft_do_split(char const *s, char c, char **str, size_t words)
 			j++;
 		str[i] = ft_substr(s, j, (ft_words_len (&s[j], c)));
 		if (!str[i])
-			ft_free(i, str);
+			return (ft_free(str), NULL);
 		while (s[j] != '\0' && s[j] != c)
 			j++;
 		i++;
