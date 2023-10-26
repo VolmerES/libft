@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 19:35:00 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/27 11:07:06 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/17 19:50:24 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ int	main()
 	int fake;
 	int org;
 
-	fake = ft_atoi("-21474836648");
-	org = atoi("-21474836648");
+	fake = ft_atoi("++---2147");
+	org = atoi("++---2147");
 	printf("Original: %d || Fake: %d \n", org, fake);
 	return(0);
 }*/

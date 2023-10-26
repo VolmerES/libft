@@ -1,4 +1,5 @@
 NAME = libft.a
+CC = gcc
 SRC = ft_isalpha.c \
 		ft_isdigit.c \
 		ft_isalnum.c \
@@ -54,12 +55,11 @@ $(NAME) : $(OBJS)
 	@ar -crs  $@ $?
 
 %.o : %.c
-	@gcc -c $(CFLAGS) $?
+	@$(CC) -c $(CFLAGS) $?
 
 BONUS : $(OBJS_BONUS) $(OBJS)
 	@ar -crs $(NAME) $?
 
-.PHONY : clean fclean bonus
 clean:
 	@rm -f *.o
 
@@ -69,3 +69,5 @@ fclean: clean
 re: fclean all
 
 bonus: BONUS
+
+.PHONY : clean fclean bonus

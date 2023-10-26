@@ -6,7 +6,7 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 16:57:57 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/10/06 21:16:59 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/17 16:32:41 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,20 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
+/*
+char	ft_function(unsigned int c, char d)
+{
+	return 10 * (d + '0');	
+}
+int	main()
+{
+	char *cad = "ABC";
+	char *result = ft_strmapi(cad, ft_function);
+
+	if (result)
+	{
+		printf("Result: %s\n", result);
+		free(result);
+	}
+	return (0);
+}*/

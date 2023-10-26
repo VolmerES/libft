@@ -6,14 +6,11 @@
 /*   By: jdelorme <jdelorme@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 19:02:21 by jdelorme          #+#    #+#             */
-/*   Updated: 2023/09/27 11:11:06 by jdelorme         ###   ########.fr       */
+/*   Updated: 2023/10/17 15:14:38 by jdelorme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
 
 void	*ft_calloc(size_t numelem, size_t sizeelem)
 {
