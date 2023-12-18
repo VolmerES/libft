@@ -97,7 +97,7 @@ char	**ft_split(char const *s, char c)
 /*
 int	main()
 {
-	char **f = ft_split(" hola mundo 42 !", ' ');
+	char **f = ft_split(" hola mundo 42 !", 'o');
 	if (f)
 	{
 		for (int i = 0; f[i] != NULL; i++)
