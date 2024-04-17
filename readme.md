@@ -3,8 +3,6 @@
 
 ![cover-libft-bonus.png](Libft%20Images/cover-libft-bonus.png)
 
-![Screen Shot 2024-02-29 at 5.15.53 PM.png](Libft%20Images/Screen_Shot_2024-02-29_at_5.15.53_PM.png)
-
 ## My First C Library
 ---
 
