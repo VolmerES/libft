@@ -12,9 +12,9 @@
 
 ---
 
-- [What is libft?](https://www.notion.so/Libft-Readme-ba2d5401a5014824bed9774600f38a3d?pvs=21)
-- [What's in it?](https://www.notion.so/Libft-Readme-ba2d5401a5014824bed9774600f38a3d?pvs=21)
-- [How does it work?](https://www.notion.so/Libft-Readme-ba2d5401a5014824bed9774600f38a3d?pvs=21)
+- [What is libft?](https://github.com/VolmerES/libft#what-is-libft)
+- [What's in it?](https://github.com/VolmerES/libft#whats-in-it)
+- [How does it work?](https://github.com/VolmerES/libft#how-does-it-work)
 
 ---
 
